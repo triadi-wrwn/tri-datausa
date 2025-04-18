@@ -53,7 +53,7 @@ const useDashboard = () => {
     const initialSearch = Object.fromEntries(
       searchParams.entries(),
     ) as DashboardQueryParams;
-    const { startYear, endYear } = initialSearch;
+    const { startYear = '2013', endYear = '2023' } = initialSearch;
     const arrYears = Array.from(
       { length: Number(endYear) - Number(startYear) + 1 },
       (_, i) => String(Number(startYear) + i),

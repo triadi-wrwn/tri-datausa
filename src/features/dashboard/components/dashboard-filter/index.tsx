@@ -30,7 +30,7 @@ const DashboardFilter = ({
         </SelectTrigger>
         <SelectContent>
           {yearList.map((y) => (
-            <SelectItem key={y} value={y.toString()} disabled={y > Number(year.end)}>
+            <SelectItem key={y} value={y.toString()} disabled={year.end ? y > Number(year.end) : false}>
               {y}
             </SelectItem>
           ))}
@@ -46,7 +46,7 @@ const DashboardFilter = ({
         </SelectTrigger>
         <SelectContent>
           {yearList.map((y) => (
-            <SelectItem key={y} value={y.toString()} disabled={y < Number(year.start)}>
+            <SelectItem key={y} value={y.toString()} disabled={year.start ? y < Number(year.start) : false}>
               {y}
             </SelectItem>
           ))}
