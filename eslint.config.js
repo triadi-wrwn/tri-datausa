@@ -63,6 +63,6 @@ export default defineConfig([
   },
   prettier,
   {
-		ignores: ["eslint.config.js", "vite.config.ts"],
+		ignores: ["eslint.config.js", "vite.config.ts", "commitlint.config.js"],
 	},
 ]);
